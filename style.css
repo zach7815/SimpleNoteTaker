@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+h1 {
+  text-align: center;
+  position: relative;
+  top: 2rem;
+}
+
+.wrapper {
+  background-color: #3e48aa;
+  border-radius: 5px;
+}
+
+form label {
+  margin-top: 3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin: 0 2rem;
+  color: #fff;
+}
+
+.title {
+  line-height: 1rem;
+}
+
+.note {
+  line-height: 5rem;
+}
+
+.btn {
+  margin: 2rem 3.5rem;
+  width: 80%;
+}
+
+.renderedNote {
+  width: 83vw;
+  margin: 0 2rem;
+  border: solid black 1px;
+  border-radius: 5px;
+}
+
+.renderedNote h4 {
+  margin: 0.5rem 1rem 1rem 0.25rem;
+}
+
+.noteTitleWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date {
+  margin: 0.65rem 1rem 0 0;
+  font-weight: 300;
+}
+
+.renderedNote p {
+  margin: 1rem 1rem 1rem 0.25rem;
+}
+
+footer {
+  text-align: center;
+}
