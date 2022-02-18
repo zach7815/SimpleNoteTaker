@@ -6,7 +6,7 @@ const LocalDate= new Date().toLocaleDateString();
 const LocalTime = new Date().toLocaleTimeString();
 const dateStamp= `${LocalDate} ${LocalTime}`;
 defaultDate.innerHTML= dateStamp;
-const deleteBtns= document.querySelectorAll(".exitButton");
+
 
 
 
@@ -19,6 +19,8 @@ let userInput ={
 
 
 function createNote(){
+   
+
     if(notesContainer.lastElementChild===defaultNote){
 
         if(userInput.formTitleContent.value=== ""|| userInput.formNoteContent.value=== ""){
@@ -27,6 +29,9 @@ function createNote(){
         else{
             defaultNote.remove()
         renderElements()
+        addDelBtnListeners()
+        
+        
         }
     }
     
@@ -36,13 +41,10 @@ function createNote(){
         }
         else{
             renderElements()
-            deleteBtns.forEach(btn=>{
-                btn.addEventListener("click", ()=> {
-                    btn.parentNode.parentNode.removeChild(btn.parentNode)
-                })
-            })
+           addDelBtnListeners()
         };
     };
+    
 };
 
 
@@ -81,12 +83,14 @@ function renderElements(){
 }
 
 
-
-
-
-
-
-
+function addDelBtnListeners(){
+    const deleteBtns= document.querySelectorAll(".exitButton");
+    deleteBtns.forEach(btn=>{
+        btn.addEventListener("click", ()=> {
+            btn.parentNode.parentNode.removeChild(btn.parentNode)
+        });
+    });
+}
 
 
 
