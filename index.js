@@ -36,6 +36,11 @@ function createNote(){
         }
         else{
             renderElements()
+            deleteBtns.forEach(btn=>{
+                btn.addEventListener("click", ()=> {
+                    btn.parentNode.parentNode.removeChild(btn.parentNode)
+                })
+            })
         };
     };
 };
@@ -69,11 +74,6 @@ function renderElements(){
             note.appendChild(noteContent);
             notesContainer.appendChild(note);
             noteForm.reset();
-            deleteBtns.forEach(btn=>{
-                btn.addEventListener("click", ()=> {
-                    btn.parentNode.parentNode.removeChild(btn.parentNode)
-                })
-            })
         }
 
         addClassesAndContent(note,noteTitle,noteContent,noteDate,deleteNoteBtn)
