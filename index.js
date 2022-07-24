@@ -5,13 +5,13 @@ const defaultDate=document.querySelector("#defaultDate");
 const LocalDate= new Date().toLocaleDateString();
 const LocalTime = new Date().toLocaleTimeString();
 const dateStamp= `${LocalDate} ${LocalTime}`;
-defaultDate.innerHTML= dateStamp;
+const defaultDate.innerHTML= dateStamp;
 
 
 
 
 
-let userInput ={
+const userInput ={
     formTitleContent: document.querySelector(".title"),
     formNoteContent: document.querySelector(".note")
 
@@ -55,7 +55,7 @@ function createNote(){
 function renderElements(){
     const note = document.createElement("div");
     const  noteTitle = document.createElement("h4");
-       const noteContent= document.createElement("p");
+      const noteContent= document.createElement("p");
      const  noteDate=document.createElement("span");
      const  deleteNoteBtn=document.createElement("span");
 
