@@ -5,7 +5,7 @@ const defaultDate=document.querySelector("#defaultDate");
 const LocalDate= new Date().toLocaleDateString();
 const LocalTime = new Date().toLocaleTimeString();
 const dateStamp= `${LocalDate} ${LocalTime}`;
-const defaultDate.innerHTML= dateStamp;
+defaultDate.innerHTML= dateStamp;
 
 
 
